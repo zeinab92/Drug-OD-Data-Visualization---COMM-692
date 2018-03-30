@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drug Overdoses and Possible Factors</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="factor-tabs-wrapper">
+            <div class="factor-tab-btn factor-tab-poverty active">
+                <span>Poverty</span>
+            </div>
+            <div class="factor-tab-btn factor-tab-unemploy">
+                <span>Unemployment</span>
+            </div>
+            <div class="factor-tab-btn factor-tab-edu">
+                <span>Education</span>
+            </div>
+            <div class="factor-tab-btn factor-tab-divorce">
+                <span>Divorce</span>
+            </div>
+            <div class="factor-tab-btn factor-tab-obesity">
+                <span>Obesity</span>
+            </div>
+        </div>
+        <div class="tabs-wrapper">
+            <div class="factor-tabs factor-poverty">
+                <div class="factor-tab factor-tab-2005">Poverty 2005</div>
+                <div class="factor-tab factor-tab-2006">Poverty 2006</div>
+                <div class="factor-tab factor-tab-2007">Poverty 2007</div>
+                <div class="factor-tab factor-tab-2008">Poverty 2008</div>
+                <div class="factor-tab factor-tab-2009">Poverty 2009</div>
+                <div class="factor-tab factor-tab-2010">Poverty 2010</div>
+                <div class="factor-tab factor-tab-2011">Poverty 2011</div>
+                <div class="factor-tab factor-tab-2012">Poverty 2012</div>
+                <div class="factor-tab factor-tab-2013">Poverty 2013</div>
+                <div class="factor-tab factor-tab-2014">Poverty 2014</div>
+                <div class="factor-tab factor-tab-2015">Poverty 2015</div>
+                <div class="factor-tab factor-tab-2016">Poverty 2016</div>
+            </div>
+            
+            <div class="factor-tabs factor-unemploy">
+                <div class="factor-tab factor-tab-2005">Unemployment 2005</div>
+                <div class="factor-tab factor-tab-2006">Unemployment 2006</div>
+                <div class="factor-tab factor-tab-2007">Unemployment 2007</div>
+                <div class="factor-tab factor-tab-2008">Unemployment 2008</div>
+                <div class="factor-tab factor-tab-2009">Unemployment 2009</div>
+                <div class="factor-tab factor-tab-2010">Unemployment 2010</div>
+                <div class="factor-tab factor-tab-2011">Unemployment 2011</div>
+                <div class="factor-tab factor-tab-2012">Unemployment 2012</div>
+                <div class="factor-tab factor-tab-2013">Unemployment 2013</div>
+                <div class="factor-tab factor-tab-2014">Unemployment 2014</div>
+                <div class="factor-tab factor-tab-2015">Unemployment 2015</div>
+                <div class="factor-tab factor-tab-2016">Unemployment 2016</div>
+            </div>
+            
+            <div class="factor-tabs factor-edu">
+                <div class="factor-tab factor-tab-2005">Education 2005</div>
+                <div class="factor-tab factor-tab-2006">Education 2006</div>
+                <div class="factor-tab factor-tab-2007">Education 2007</div>
+                <div class="factor-tab factor-tab-2008">Education 2008</div>
+                <div class="factor-tab factor-tab-2009">Education 2009</div>
+                <div class="factor-tab factor-tab-2010">Education 2010</div>
+                <div class="factor-tab factor-tab-2011">Education 2011</div>
+                <div class="factor-tab factor-tab-2012">Education 2012</div>
+                <div class="factor-tab factor-tab-2013">Education 2013</div>
+                <div class="factor-tab factor-tab-2014">Education 2014</div>
+                <div class="factor-tab factor-tab-2015">Education 2015</div>
+                <div class="factor-tab factor-tab-2016">Education 2016</div>
+            </div>
+            
+            <div class="factor-tabs factor-divorce">
+                <div class="factor-tab factor-tab-2005">Divorce 2005</div>
+                <div class="factor-tab factor-tab-2006">Divorce 2006</div>
+                <div class="factor-tab factor-tab-2007">Divorce 2007</div>
+                <div class="factor-tab factor-tab-2008">Divorce 2008</div>
+                <div class="factor-tab factor-tab-2009">Divorce 2009</div>
+                <div class="factor-tab factor-tab-2010">Divorce 2010</div>
+                <div class="factor-tab factor-tab-2011">Divorce 2011</div>
+                <div class="factor-tab factor-tab-2012">Divorce 2012</div>
+                <div class="factor-tab factor-tab-2013">Divorce 2013</div>
+                <div class="factor-tab factor-tab-2014">Divorce 2014</div>
+                <div class="factor-tab factor-tab-2015">Divorce 2015</div>
+                <div class="factor-tab factor-tab-2016">Divorce 2016</div>
+            </div>
+            
+            <div class="factor-tabs factor-obesity">
+                <div class="factor-tab factor-tab-2005">Obesity 2005</div>
+                <div class="factor-tab factor-tab-2006">Obesity 2006</div>
+                <div class="factor-tab factor-tab-2007">Obesity 2007</div>
+                <div class="factor-tab factor-tab-2008">Obesity 2008</div>
+                <div class="factor-tab factor-tab-2009">Obesity 2009</div>
+                <div class="factor-tab factor-tab-2010">Obesity 2010</div>
+                <div class="factor-tab factor-tab-2011">Obesity 2011</div>
+                <div class="factor-tab factor-tab-2012">Obesity 2012</div>
+                <div class="factor-tab factor-tab-2013">Obesity 2013</div>
+                <div class="factor-tab factor-tab-2014">Obesity 2014</div>
+                <div class="factor-tab factor-tab-2015">Obesity 2015</div>
+                <div class="factor-tab factor-tab-2016">Obesity 2016</div>
+            </div>
+        
+            <div id="slider"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(".factor-tab-btn").click(function(){
+            $(".factor-tab-btn").removeClass("active");
+            $(".factor-tabs").css("display", "none");
+        });
+        $(".factor-tab-poverty").click(function(){
+            $(this).addClass("active");
+            $(".factor-poverty").css("display", "block");
+        });
+        $(".factor-tab-unemploy").click(function(){
+            $(this).addClass("active");
+            $(".factor-unemploy").css("display", "block");
+        });
+        $(".factor-tab-edu").click(function(){
+            $(this).addClass("active");
+            $(".factor-edu").css("display", "block");
+        });
+        $(".factor-tab-divorce").click(function(){
+            $(this).addClass("active");
+            $(".factor-divorce").css("display", "block");
+        });
+        $(".factor-tab-obesity").click(function(){
+            $(this).addClass("active");
+            $(".factor-obesity").css("display", "block");
+        });
+    </script>
+    <script>
+        $("#slider").slider({
+                value: 2005,
+                min: 2005,
+                max: 2016,
+                step: 1,
+                slide: function(event, ui) {
+                    if (ui.value == 2005) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2005").css("display", "block");
+                    }
+                    if (ui.value == 2006) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2006").css("display", "block");
+                    }
+                    if (ui.value == 2007) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2007").css("display", "block");
+                    }
+                    if (ui.value == 2008) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2008").css("display", "block");
+                    }
+                    if (ui.value == 2009) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2009").css("display", "block");
+                    }
+                    if (ui.value == 2010) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2010").css("display", "block");
+                    }
+                    if (ui.value == 2011) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2011").css("display", "block");
+                    }
+                    if (ui.value == 2012) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2012").css("display", "block");
+                    }
+                    if (ui.value == 2013) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2013").css("display", "block");
+                    }
+                    if (ui.value == 2014) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2014").css("display", "block");
+                    }
+                    if (ui.value == 2015) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2015").css("display", "block");
+                    }
+                    if (ui.value == 2016) {
+                        $(".factor-tab").css("display", "none");
+                        $(".factor-tab-2016").css("display", "block");
+                    }
+                }
+            })
+            .each(function() {
+
+                // Get the options for this slider
+                var opt = $(this).data().uiSlider.options;
+
+                // Get the number of possible values
+                var vals = opt.max - opt.min;
+
+                // Space out values
+                for (var i = 0; i <= vals; i++) {
+                    var el = $('<label>' + (i + 2005) + '</label>').css('left', (i / vals * 100) + '%');
+                    $("#slider").append(el);
+                }
+            });
+
+        //Start with Poverty and 2005 on page load
+        $(".factor-tab-2005").css("display", "block");
+        $(".factor-poverty").css("display", "block");
+    </script>
+</body>
+
+</html>
