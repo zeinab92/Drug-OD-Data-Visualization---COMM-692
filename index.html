@@ -7,6 +7,7 @@
     <title>Drug Overdoses and Possible Factors</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 </head>
 
 <body>
@@ -30,33 +31,81 @@
         </div>
         <div class="tabs-wrapper">
             <div class="factor-tabs factor-poverty">
-                <div class="factor-tab factor-tab-2005">Poverty 2005</div>
-                <div class="factor-tab factor-tab-2006">Poverty 2006</div>
-                <div class="factor-tab factor-tab-2007">Poverty 2007</div>
-                <div class="factor-tab factor-tab-2008">Poverty 2008</div>
-                <div class="factor-tab factor-tab-2009">Poverty 2009</div>
-                <div class="factor-tab factor-tab-2010">Poverty 2010</div>
-                <div class="factor-tab factor-tab-2011">Poverty 2011</div>
-                <div class="factor-tab factor-tab-2012">Poverty 2012</div>
-                <div class="factor-tab factor-tab-2013">Poverty 2013</div>
-                <div class="factor-tab factor-tab-2014">Poverty 2014</div>
-                <div class="factor-tab factor-tab-2015">Poverty 2015</div>
-                <div class="factor-tab factor-tab-2016">Poverty 2016</div>
+                <div class="factor-tab factor-tab-2005">
+                    <label>Poverty 2005</label>
+                </div>
+                <div class="factor-tab factor-tab-2006">
+                    <label>Poverty 2006</label>
+                </div>
+                <div class="factor-tab factor-tab-2007">
+                    <label>Poverty 2007</label>
+                </div>
+                <div class="factor-tab factor-tab-2008">
+                    <label>Poverty 2008</label>
+                </div>
+                <div class="factor-tab factor-tab-2009">
+                    <label>Poverty 2009</label>
+                </div>
+                <div class="factor-tab factor-tab-2010">
+                    <label>Poverty 2010</label>
+                </div>
+                <div class="factor-tab factor-tab-2011">
+                    <label>Poverty 2011</label>
+                </div>
+                <div class="factor-tab factor-tab-2012">
+                    <label>Poverty 2012</label>
+                </div>
+                <div class="factor-tab factor-tab-2013">
+                    <label>Poverty 2013</label>
+                </div>
+                <div class="factor-tab factor-tab-2014">
+                    <label>Poverty 2014</label>
+                </div>
+                <div class="factor-tab factor-tab-2015">
+                    <label>Poverty 2015</label>
+                </div>
+                <div class="factor-tab factor-tab-2016">
+                    <label>Poverty 2016</label>
+                </div>
             </div>
             
             <div class="factor-tabs factor-unemploy">
-                <div class="factor-tab factor-tab-2005">Unemployment 2005</div>
-                <div class="factor-tab factor-tab-2006">Unemployment 2006</div>
-                <div class="factor-tab factor-tab-2007">Unemployment 2007</div>
-                <div class="factor-tab factor-tab-2008">Unemployment 2008</div>
-                <div class="factor-tab factor-tab-2009">Unemployment 2009</div>
-                <div class="factor-tab factor-tab-2010">Unemployment 2010</div>
-                <div class="factor-tab factor-tab-2011">Unemployment 2011</div>
-                <div class="factor-tab factor-tab-2012">Unemployment 2012</div>
-                <div class="factor-tab factor-tab-2013">Unemployment 2013</div>
-                <div class="factor-tab factor-tab-2014">Unemployment 2014</div>
-                <div class="factor-tab factor-tab-2015">Unemployment 2015</div>
-                <div class="factor-tab factor-tab-2016">Unemployment 2016</div>
+                <div class="factor-tab factor-tab-2005">
+                    <label>Unemployment 2005</label>
+                </div>
+                <div class="factor-tab factor-tab-2006">
+                    <label>Unemployment 2006</label>
+                </div>
+                <div class="factor-tab factor-tab-2007">
+                    <label>Unemployment 2007</label>
+                </div>
+                <div class="factor-tab factor-tab-2008">
+                    <label>Unemployment 2008</label>
+                </div>
+                <div class="factor-tab factor-tab-2009">
+                    <label>Unemployment 2009</label>
+                </div>
+                <div class="factor-tab factor-tab-2010">
+                    <label>Unemployment 2010</label>
+                </div>
+                <div class="factor-tab factor-tab-2011">
+                    <label>Unemployment 2011</label>
+                </div>
+                <div class="factor-tab factor-tab-2012">
+                    <label>Unemployment 2012</label>
+                </div>
+                <div class="factor-tab factor-tab-2013">
+                    <label>Unemployment 2013</label>
+                </div>
+                <div class="factor-tab factor-tab-2014">
+                    <label>Unemployment 2014</label>
+                </div>
+                <div class="factor-tab factor-tab-2015">
+                    <label>Unemployment 2015</label>
+                </div>
+                <div class="factor-tab factor-tab-2016">
+                    <label>Unemployment 2016</label>
+                </div>
             </div>
             
             <div class="factor-tabs factor-edu">
@@ -107,9 +156,12 @@
             <div id="slider"></div>
         </div>
     </div>
-
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/poverty.js"></script>
+    <script src="js/unemployment.js"></script>
+    
     <script>
         $(".factor-tab-btn").click(function(){
             $(".factor-tab-btn").removeClass("active");

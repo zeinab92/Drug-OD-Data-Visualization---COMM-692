@@ -20,7 +20,9 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    left: -50px;
     margin: 3em auto 1em;
+    position: relative;
     width: 1000px;
 }
 
@@ -31,8 +33,8 @@ body {
 .factor-tab-btn {
     background: #f0f0f0;
     cursor: pointer;
-    height: 75px;
-    line-height: 75px;
+    height: 105px;
+    line-height: 105px;
     text-align: center;
 }
 
@@ -45,8 +47,20 @@ body {
     width: 85%;
 }
 
+.factor-tab {
+    position: relative;
+}
+
 .factor-tab, .factor-tabs {
     display: none;
+}
+
+.factor-tab label {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 #slider {
@@ -59,4 +73,24 @@ body {
     margin-top: 20px;
     position: absolute;
     text-align: center;
+}
+
+/* Legend Position Style */
+
+.legend {
+    position: absolute;
+    right: -55px;
+    top: 0;
+    width: 70px;
+}
+
+.axis text {
+    font-size: 15px;
+}
+
+.axis line,
+.axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
