@@ -18,6 +18,15 @@ var svg_unemp_2005 = d3.select(".factor-unemploy .factor-tab-2005")
     .attr("height", height)
     .attr("style", "margin-left:-50px");
 
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2005.call(tip);
+
 d3.csv("data/unemployment/unemployment-2005.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
@@ -52,6 +61,8 @@ d3.csv("data/unemployment/unemployment-2005.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -118,6 +129,15 @@ var svg_unemp_2006 = d3.select(".factor-unemploy .factor-tab-2006")
     .attr("height", height)
     .attr("style", "margin-left:-50px");
 
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2006.call(tip);
+
 d3.csv("data/unemployment/unemployment-2006.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
@@ -152,6 +172,8 @@ d3.csv("data/unemployment/unemployment-2006.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -172,6 +194,15 @@ var svg_unemp_2007 = d3.select(".factor-unemploy .factor-tab-2007")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2007.call(tip);
 
 d3.csv("data/unemployment/unemployment-2007.csv", function (data) {
     var dataArray = [];
@@ -207,6 +238,8 @@ d3.csv("data/unemployment/unemployment-2007.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -227,6 +260,15 @@ var svg_unemp_2008 = d3.select(".factor-unemploy .factor-tab-2008")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2008.call(tip);
 
 d3.csv("data/unemployment/unemployment-2008.csv", function (data) {
     var dataArray = [];
@@ -262,6 +304,8 @@ d3.csv("data/unemployment/unemployment-2008.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -282,6 +326,15 @@ var svg_unemp_2009 = d3.select(".factor-unemploy .factor-tab-2009")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2009.call(tip);
 
 d3.csv("data/unemployment/unemployment-2009.csv", function (data) {
     var dataArray = [];
@@ -317,6 +370,8 @@ d3.csv("data/unemployment/unemployment-2009.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -337,6 +392,15 @@ var svg_unemp_2010 = d3.select(".factor-unemploy .factor-tab-2010")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2010.call(tip);
 
 d3.csv("data/unemployment/unemployment-2010.csv", function (data) {
     var dataArray = [];
@@ -372,6 +436,8 @@ d3.csv("data/unemployment/unemployment-2010.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -392,6 +458,15 @@ var svg_unemp_2011 = d3.select(".factor-unemploy .factor-tab-2011")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2011.call(tip);
 
 d3.csv("data/unemployment/unemployment-2011.csv", function (data) {
     var dataArray = [];
@@ -427,6 +502,8 @@ d3.csv("data/unemployment/unemployment-2011.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -447,6 +524,15 @@ var svg_unemp_2012 = d3.select(".factor-unemploy .factor-tab-2012")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2012.call(tip);
 
 d3.csv("data/unemployment/unemployment-2012.csv", function (data) {
     var dataArray = [];
@@ -482,6 +568,8 @@ d3.csv("data/unemployment/unemployment-2012.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -502,6 +590,15 @@ var svg_unemp_2013 = d3.select(".factor-unemploy .factor-tab-2013")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2013.call(tip);
 
 d3.csv("data/unemployment/unemployment-2013.csv", function (data) {
     var dataArray = [];
@@ -537,6 +634,8 @@ d3.csv("data/unemployment/unemployment-2013.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -557,6 +656,15 @@ var svg_unemp_2014 = d3.select(".factor-unemploy .factor-tab-2014")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2014.call(tip);
 
 d3.csv("data/unemployment/unemployment-2014.csv", function (data) {
     var dataArray = [];
@@ -592,6 +700,8 @@ d3.csv("data/unemployment/unemployment-2014.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -612,6 +722,15 @@ var svg_unemp_2015 = d3.select(".factor-unemploy .factor-tab-2015")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2015.call(tip);
 
 d3.csv("data/unemployment/unemployment-2015.csv", function (data) {
     var dataArray = [];
@@ -647,6 +766,8 @@ d3.csv("data/unemployment/unemployment-2015.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
@@ -667,6 +788,15 @@ var svg_unemp_2016 = d3.select(".factor-unemploy .factor-tab-2016")
     .attr("width", width)
     .attr("height", height)
     .attr("style", "margin-left:-50px");
+
+var tip = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+    });
+
+svg_unemp_2016.call(tip);
 
 d3.csv("data/unemployment/unemployment-2016.csv", function (data) {
     var dataArray = [];
@@ -702,6 +832,8 @@ d3.csv("data/unemployment/unemployment-2016.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
+            .on('mouseover', tip.show)
+            .on('mouseout', tip.hide)
             .attr("class", function (d) {
                 return d.properties.name;
             })
