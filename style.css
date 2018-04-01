@@ -12,6 +12,8 @@
 
 body, .ui-widget, .axis{
     font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
@@ -19,7 +21,7 @@ body, .ui-widget, .axis{
     display: -ms-flexbox;
     display: flex;
     left: -50px;
-    margin: 3em auto 1em;
+    margin: 2em auto 1em;
     position: relative;
     width: 1000px;
 }
@@ -34,8 +36,8 @@ body, .ui-widget, .axis{
     height: 105px;
     line-height: 105px;
     text-align: center;
-    font-weight: bold;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 .factor-tab-btn.active {
@@ -60,6 +62,7 @@ body, .ui-widget, .axis{
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 25px;
+    line-height: 30px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
@@ -104,6 +107,7 @@ body, .ui-widget, .axis{
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 2px;
+    font-size: 14px;
 }
 
 /* Creates a small triangle extender for the tooltip */
@@ -111,7 +115,6 @@ body, .ui-widget, .axis{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline;
-    font-size: 10px;
     width: 100%;
     line-height: 1;
     color: rgba(0, 0, 0, 0.8);
