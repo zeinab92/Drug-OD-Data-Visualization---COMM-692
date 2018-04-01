@@ -1,13 +1,13 @@
 //UNEMPLOYMENT 2005
-var width = 800;
-var height = 450;
+var width = 600;
+var height = 350;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([1000]);
+    .scale([800]);
 
 var path = d3.geoPath()
     .projection(projection);
@@ -15,8 +15,7 @@ var path = d3.geoPath()
 var svg_unemp_2005 = d3.select(".factor-unemploy .factor-tab-2005")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -114,7 +113,7 @@ d3.csv("data/unemployment/unemployment-2005.csv", function (data) {
 
         key.append("g")
             .attr("class", "y axis")
-            .attr("transform", "translate(41,10)")
+            .attr("transform", "translate(21,10)")
             .call(yAxis)
     });
 });
@@ -126,8 +125,7 @@ d3.csv("data/unemployment/unemployment-2005.csv", function (data) {
 var svg_unemp_2006 = d3.select(".factor-unemploy .factor-tab-2006")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -192,8 +190,7 @@ d3.csv("data/unemployment/unemployment-2006.csv", function (data) {
 var svg_unemp_2007 = d3.select(".factor-unemploy .factor-tab-2007")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -258,8 +255,7 @@ d3.csv("data/unemployment/unemployment-2007.csv", function (data) {
 var svg_unemp_2008 = d3.select(".factor-unemploy .factor-tab-2008")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -324,8 +320,7 @@ d3.csv("data/unemployment/unemployment-2008.csv", function (data) {
 var svg_unemp_2009 = d3.select(".factor-unemploy .factor-tab-2009")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -390,8 +385,7 @@ d3.csv("data/unemployment/unemployment-2009.csv", function (data) {
 var svg_unemp_2010 = d3.select(".factor-unemploy .factor-tab-2010")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -456,8 +450,7 @@ d3.csv("data/unemployment/unemployment-2010.csv", function (data) {
 var svg_unemp_2011 = d3.select(".factor-unemploy .factor-tab-2011")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -522,8 +515,7 @@ d3.csv("data/unemployment/unemployment-2011.csv", function (data) {
 var svg_unemp_2012 = d3.select(".factor-unemploy .factor-tab-2012")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -588,8 +580,7 @@ d3.csv("data/unemployment/unemployment-2012.csv", function (data) {
 var svg_unemp_2013 = d3.select(".factor-unemploy .factor-tab-2013")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -654,8 +645,7 @@ d3.csv("data/unemployment/unemployment-2013.csv", function (data) {
 var svg_unemp_2014 = d3.select(".factor-unemploy .factor-tab-2014")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -720,8 +710,7 @@ d3.csv("data/unemployment/unemployment-2014.csv", function (data) {
 var svg_unemp_2015 = d3.select(".factor-unemploy .factor-tab-2015")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -786,8 +775,7 @@ d3.csv("data/unemployment/unemployment-2015.csv", function (data) {
 var svg_unemp_2016 = d3.select(".factor-unemploy .factor-tab-2016")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')

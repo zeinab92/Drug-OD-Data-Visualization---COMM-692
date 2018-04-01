@@ -1,7 +1,7 @@
 //POVERTY 2005
 //Width and height of map
-var width = 800;
-var height = 450;
+var width = 600;
+var height = 350;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
@@ -9,7 +9,7 @@ var highColor = '#BE1F24'
 // D3 Projection
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2]) // translate to center of screen
-    .scale([1000]); // scale things down so see entire US
+    .scale([800]); // scale things down so see entire US
 
 // Define path generator
 var path = d3.geoPath() // path generator that will convert GeoJSON to SVG paths
@@ -19,8 +19,7 @@ var path = d3.geoPath() // path generator that will convert GeoJSON to SVG paths
 var svg_pov_2005 = d3.select(".factor-poverty .factor-tab-2005")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -128,8 +127,8 @@ d3.csv("data/poverty/poverty-2005.csv", function (data) {
 
         key.append("g")
             .attr("class", "y axis")
-            .attr("transform", "translate(41,10)")
-            .call(yAxis)
+            .attr("transform", "translate(21,10)")
+            .call(yAxis)        
     });
 });
 //END OF POVERTY 2005
@@ -140,8 +139,7 @@ d3.csv("data/poverty/poverty-2005.csv", function (data) {
 var svg_pov_2006 = d3.select(".factor-poverty .factor-tab-2006")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -206,8 +204,7 @@ d3.csv("data/poverty/poverty-2006.csv", function (data) {
 var svg_pov_2007 = d3.select(".factor-poverty .factor-tab-2007")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -272,8 +269,7 @@ d3.csv("data/poverty/poverty-2007.csv", function (data) {
 var svg_pov_2008 = d3.select(".factor-poverty .factor-tab-2008")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -339,8 +335,7 @@ d3.csv("data/poverty/poverty-2008.csv", function (data) {
 var svg_pov_2009 = d3.select(".factor-poverty .factor-tab-2009")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -405,8 +400,7 @@ d3.csv("data/poverty/poverty-2009.csv", function (data) {
 var svg_pov_2010 = d3.select(".factor-poverty .factor-tab-2010")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -471,8 +465,7 @@ d3.csv("data/poverty/poverty-2010.csv", function (data) {
 var svg_pov_2011 = d3.select(".factor-poverty .factor-tab-2011")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -537,8 +530,7 @@ d3.csv("data/poverty/poverty-2011.csv", function (data) {
 var svg_pov_2012 = d3.select(".factor-poverty .factor-tab-2012")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -603,8 +595,7 @@ d3.csv("data/poverty/poverty-2012.csv", function (data) {
 var svg_pov_2013 = d3.select(".factor-poverty .factor-tab-2013")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -669,8 +660,7 @@ d3.csv("data/poverty/poverty-2013.csv", function (data) {
 var svg_pov_2014 = d3.select(".factor-poverty .factor-tab-2014")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -735,8 +725,7 @@ d3.csv("data/poverty/poverty-2014.csv", function (data) {
 var svg_pov_2015 = d3.select(".factor-poverty .factor-tab-2015")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')
@@ -801,8 +790,7 @@ d3.csv("data/poverty/poverty-2015.csv", function (data) {
 var svg_pov_2016 = d3.select(".factor-poverty .factor-tab-2016")
     .append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .attr("style", "margin-left:-50px");
+    .attr("height", height);
 
 var tip = d3.tip()
     .attr('class', 'd3-tip')

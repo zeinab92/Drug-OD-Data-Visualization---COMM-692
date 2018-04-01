@@ -16,28 +16,56 @@ body, .ui-widget, .axis{
 	-moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3 {
+    font-family: 'Roboto Slab', serif;
+}
+
+header {
+    background: rgb(32,32,32);
+    padding: 0.5em 1em 3.5em;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    right: 0;
+    left: 0;
+    font-size: 50px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 700px;
+    margin: 15px auto 1.5em;
+}
+
 .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    left: -50px;
-    margin: 2em auto 1em;
+    margin: 3em auto 5em;
     position: relative;
-    width: 1000px;
+    width: 1280px;
 }
 
 .factor-tabs-wrapper {
-    width: 15%;
+    width: 10%;
 }
 
 .factor-tab-btn {
     background: #f0f0f0;
     cursor: pointer;
-    height: 105px;
-    line-height: 105px;
+    height: 80px;
+    line-height: 80px;
     text-align: center;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .factor-tab-btn.active {
@@ -45,8 +73,16 @@ body, .ui-widget, .axis{
 }
 
 .tabs-wrapper {
-    padding-left: 5%;
-    width: 85%;
+    padding-left: 1%;
+    padding-right: 3%;
+    position: relative;
+    width: 57%;
+}
+
+.line-graph-wrapper {
+    width: 43%;
+    padding: 25px;
+    text-align: center;
 }
 
 .factor-tab {
@@ -84,13 +120,13 @@ body, .ui-widget, .axis{
 
 .legend {
     position: absolute;
-    right: -55px;
-    top: 0;
-    width: 70px;
+    right: 0px;
+    bottom: 105px;
+    width: 65px;
 }
 
 .axis text {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .axis line,
@@ -98,6 +134,10 @@ body, .ui-widget, .axis{
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
+}
+
+.legend rect {
+    width: 20px;
 }
 
 .d3-tip {
