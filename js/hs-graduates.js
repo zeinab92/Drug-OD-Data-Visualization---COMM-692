@@ -62,8 +62,16 @@ d3.csv("data/hs-graduates/hs-graduates-2005.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -172,8 +180,16 @@ d3.csv("data/hs-graduates/hs-graduates-2006.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -228,8 +244,16 @@ d3.csv("data/hs-graduates/hs-graduates-2007.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -293,8 +317,16 @@ d3.csv("data/hs-graduates/hs-graduates-2008.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -358,8 +390,16 @@ d3.csv("data/hs-graduates/hs-graduates-2009.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -423,8 +463,16 @@ d3.csv("data/hs-graduates/hs-graduates-2010.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -488,8 +536,16 @@ d3.csv("data/hs-graduates/hs-graduates-2011.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -553,8 +609,16 @@ d3.csv("data/hs-graduates/hs-graduates-2012.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -618,8 +682,16 @@ d3.csv("data/hs-graduates/hs-graduates-2013.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -683,8 +755,16 @@ d3.csv("data/hs-graduates/hs-graduates-2014.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -748,8 +828,16 @@ d3.csv("data/hs-graduates/hs-graduates-2015.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -813,8 +901,16 @@ d3.csv("data/hs-graduates/hs-graduates-2016.csv", function (data) {
             .attr("d", path)
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+            .on('mouseenter', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).addClass("hovered");
+            })
+            .on('mouseleave', function (d) {
+                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
+                $(".edu-linegraph").find(state_hover).removeClass("hovered");
+            })
             .attr("class", function (d) {
-                return d.properties.name;
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
