@@ -175,20 +175,20 @@ p {
 .line {
     fill: none;
     stroke: rgba(0,0,0,0.1);
-    stroke-width: 1.5px;
+    stroke-width: 2px;
 }
 .state text {
     display: none;
     font-size: 12px;
 }
 
-.state.hovered text {
+.state.hovered text, .linegraph .state:hover text {
     display: block;
 }
 
-.state.hovered .line {
-    stroke: rgba(0,0,0,0.9);
-    stroke-width: 3px;
+.state.hovered .line, .linegraph .state:hover .line {
+    stroke: rgba(0,0,0,0.8);
+    stroke-width: 4px;
 }
 
 .tick{

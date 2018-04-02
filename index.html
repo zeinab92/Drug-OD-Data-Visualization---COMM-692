@@ -248,6 +248,7 @@
             <svg class="poverty-linegraph linegraph" width="527" height="450"></svg>
             <svg class="unemploy-linegraph linegraph" width="527" height="450"></svg>
             <svg class="edu-linegraph linegraph" width="527" height="450"></svg>
+            <svg class="divorce-linegraph linegraph" width="527" height="450"></svg>
         </div>
     </div>
     
@@ -680,7 +681,7 @@
                 .attr("y", 6)
                 .attr("dy", "0.71em")
                 .attr("fill", "#000")
-                .text("Poverty Rate");
+                .text("Education Rate");
 
             var state3 = g3.selectAll()
                 .data(states3)
@@ -719,6 +720,123 @@
         }
     </script>
     <!-- END OF ANNUAL HS EDUCATION LINEGRAPH SCRIPT -->
+    
+    <!-- ANNUAL DIVOREE LINEGRAPH SCRIPT -->
+    <script>
+        var svg_div_yearly = d3.select("svg.divorce-linegraph"),
+            margin4 = {
+                top: 20,
+                right: 90,
+                bottom: 30,
+                left: 35
+            },
+            width4 = svg_div_yearly.attr("width") - margin4.left - margin4.right,
+            height4 = svg_div_yearly.attr("height") - margin4.top - margin4.bottom,
+            g4 = svg_div_yearly.append("g").attr("transform", "translate(" + margin4.left + "," + margin4.top + ")");
+
+        var parseTime4 = d3.timeParse("%Y");
+
+        var x4 = d3.scaleTime().range([0, width4]),
+            y4 = d3.scaleLinear().range([height4, 0]),
+            z4 = d3.scaleOrdinal(d3.schemeCategory10);
+
+        var line4 = d3.line()
+            .curve(d3.curveBasis)
+            .x(function(d) {
+                return x4(d.date);
+            })
+            .y(function(d) {
+                return y4(d.rate);
+            });
+
+        d3.tsv("data/divorce/divorce-yearly-data.tsv", type, function(error, data) {
+            if (error) throw error;
+
+            var states4 = data.columns.slice(1).map(function(id) {
+                return {
+                    id: id,
+                    values: data.map(function(d) {
+                        return {
+                            date: d.date,
+                            rate: d[id]
+                        };
+                    })
+                };
+            });
+
+            x4.domain(d3.extent(data, function(d) {
+                return d.date;
+            }));
+
+            y4.domain([
+                d3.min(states4, function(c) {
+                    return d3.min(c.values, function(d) {
+                        return d.rate;
+                    });
+                }),
+                d3.max(states4, function(c) {
+                    return d3.max(c.values, function(d) {
+                        return d.rate;
+                    });
+                })
+            ]);
+
+            z4.domain(states4.map(function(c) {
+                return c.id;
+            }));
+
+            g4.append("g")
+                .attr("class", "axis axis--x")
+                .attr("transform", "translate(0," + height4 + ")")
+                .call(d3.axisBottom(x4));
+
+            g4.append("g")
+                .attr("class", "axis axis--y")
+                .call(d3.axisLeft(y4))
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "0.71em")
+                .attr("fill", "#000")
+                .text("Divorce Rate");
+
+            var state4 = g4.selectAll()
+                .data(states4)
+                .enter().append("g")
+                .attr("class", function(d) {
+                    return "state " + d.id.replace(/\s+/g, '');
+                });
+
+            state4.append("path")
+                .attr("class", "line")
+                .attr("d", function(d) {
+                    return line4(d.values);
+                });
+
+            state4.append("text")
+                .datum(function(d) {
+                    return {
+                        id: d.id,
+                        value: d.values[d.values.length - 1]
+                    };
+                })
+                .attr("transform", function(d) {
+                    return "translate(" + x4(d.value.date) + "," + y4(d.value.rate) + ")";
+                })
+                .attr("x", 1)
+                .attr("dy", "0.35em")
+                .text(function(d) {
+                    return d.id;
+                });
+        });
+
+        function type(d4, _, columns4) {
+            d3.date = parseTime4(d3.date);
+            for (var i = 1, n = columns4.length, c; i < n; ++i) d4[c = columns4[i]] = +d4[c];
+            return d4;
+        }
+    </script>
+    <!-- END OF ANNUAL DIVORCE LINEGRAPH SCRIPT -->
 </body>
 
 </html>
