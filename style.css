@@ -51,7 +51,8 @@ p {
     display: flex;
     margin: 5em auto;
     position: relative;
-    width: 1280px;
+    width: 95%;
+    max-width: 1400px;
 }
 
 .factor-tabs-wrapper {
@@ -81,7 +82,7 @@ p {
 
 .line-graph-wrapper {
     width: 43%;
-    padding: 25px;
+    padding: 25px 0;
     text-align: center;
 }
 
@@ -120,13 +121,13 @@ p {
 
 .legend {
     position: absolute;
-    right: 0px;
+    right: 20px;
     bottom: 105px;
     width: 65px;
 }
 
 .axis text {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .axis line,
@@ -163,5 +164,36 @@ p {
     text-align: center;
     margin: -1px 0 0 0;
     top: 100%;
+    left: 0;
+}
+
+/* Line graph styling */
+.line {
+    fill: none;
+    stroke: rgba(0,0,0,0.25);
+    stroke-width: 1.5px;
+}
+.state text {
+    display: none;
+    font-size: 12px;
+}
+
+.state.test text {
+    display: block;
+}
+
+.state.test .line {
+    stroke: rgba(0,0,0,0.9);
+    stroke-width: 3px;
+}
+
+.tick{
+    position: relative;
+}
+
+.tick:before {
+    content: 'r';
+    position: absolute;
+    top: 0;
     left: 0;
 }
