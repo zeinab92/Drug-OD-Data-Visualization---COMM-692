@@ -86,7 +86,7 @@ p {
     text-align: center;
 }
 
-.factor-tab {
+.factor-tab, .factor-tabs {
     position: relative;
 }
 
@@ -96,17 +96,21 @@ p {
 
 .factor-tab label {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     line-height: 30px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
 }
 
+.factor-od {
+    display: block!important;
+}
+
 #slider {
-    margin: 2em auto;
+    margin: 3.5em auto;
     width: 100%;
 }
 
@@ -122,8 +126,8 @@ p {
 
 .legend {
     position: absolute;
-    right: 20px;
-    bottom: 105px;
+    right: -20px;
+    top: 105px;
     width: 65px;
 }
 

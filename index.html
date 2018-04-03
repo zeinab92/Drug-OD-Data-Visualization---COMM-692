@@ -241,8 +241,47 @@
                     <label>Obesity 2016</label>
                 </div>
             </div>
-        
+            
             <div id="slider"></div>
+            
+            <div class="factor-tabs factor-od">
+                <div class="factor-tab factor-tab-2005">
+                    <label>Drug Overdoses 2005</label>
+                </div>
+                <div class="factor-tab factor-tab-2006">
+                    <label>Drug Overdoses 2006</label>
+                </div>
+                <div class="factor-tab factor-tab-2007">
+                    <label>Drug Overdoses 2007</label>
+                </div>
+                <div class="factor-tab factor-tab-2008">
+                    <label>Drug Overdoses 2008</label>
+                </div>
+                <div class="factor-tab factor-tab-2009">
+                    <label>Drug Overdoses 2009</label>
+                </div>
+                <div class="factor-tab factor-tab-2010">
+                    <label>Drug Overdoses 2010</label>
+                </div>
+                <div class="factor-tab factor-tab-2011">
+                    <label>Drug Overdoses 2011</label>
+                </div>
+                <div class="factor-tab factor-tab-2012">
+                    <label>Drug Overdoses 2012</label>
+                </div>
+                <div class="factor-tab factor-tab-2013">
+                    <label>Drug Overdoses 2013</label>
+                </div>
+                <div class="factor-tab factor-tab-2014">
+                    <label>Drug Overdoses 2014</label>
+                </div>
+                <div class="factor-tab factor-tab-2015">
+                    <label>Drug Overdoses 2015</label>
+                </div>
+                <div class="factor-tab factor-tab-2016">
+                    <label>Drug Overdoses 2016</label>
+                </div>
+            </div>
         </div>
         <div class="line-graph-wrapper">
             <svg class="poverty-linegraph linegraph" width="527" height="450"></svg>
@@ -260,6 +299,7 @@
     <script src="js/hs-graduates.js"></script>
     <script src="js/divorce.js"></script>
     <script src="js/obesity.js"></script>
+    <script src="js/drug-od.js"></script>
     
     <script>
         $(".factor-tab-btn").click(function(){
@@ -368,6 +408,7 @@
         //Start with Poverty and 2005 on page load
         $(".factor-tab-2005").css("display", "block");
         $(".factor-poverty").css("display", "block");
+        $(".factor-od").css("display", "block");
         $(".poverty-linegraph").css("display", "block");
     </script>
     
@@ -955,6 +996,7 @@
         }
     </script>
     <!-- END OF OBESITY LINEGRAPH SCRIPT -->
+    
 </body>
 
 </html>
