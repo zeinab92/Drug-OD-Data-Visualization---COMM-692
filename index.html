@@ -289,6 +289,7 @@
             <svg class="edu-linegraph linegraph" width="527" height="450"></svg>
             <svg class="divorce-linegraph linegraph" width="527" height="450"></svg>
             <svg class="obesity-linegraph linegraph" width="527" height="450"></svg>
+            <svg class="od-linegraph linegraph" width="527" height="450"></svg>
         </div>
     </div>
     
@@ -408,7 +409,6 @@
         //Start with Poverty and 2005 on page load
         $(".factor-tab-2005").css("display", "block");
         $(".factor-poverty").css("display", "block");
-        $(".factor-od").css("display", "block");
         $(".poverty-linegraph").css("display", "block");
     </script>
     
@@ -872,10 +872,10 @@
                 });
         });
 
-        function type(d4, _, columns4) {
+        function type(d3, _, columns4) {
             d3.date = parseTime4(d3.date);
-            for (var i = 1, n = columns4.length, c; i < n; ++i) d4[c = columns4[i]] = +d4[c];
-            return d4;
+            for (var i = 1, n = columns4.length, c; i < n; ++i) d3[c = columns4[i]] = +d3[c];
+            return d3;
         }
     </script>
     <!-- END OF ANNUAL DIVORCE LINEGRAPH SCRIPT -->
@@ -989,13 +989,130 @@
                 });
         });
 
-        function type(d5, _, columns5) {
+        function type(d3, _, columns5) {
             d3.date = parseTime5(d3.date);
-            for (var i = 1, n = columns5.length, c; i < n; ++i) d5[c = columns5[i]] = +d5[c];
-            return d5;
+            for (var i = 1, n = columns5.length, c; i < n; ++i) d3[c = columns5[i]] = +d3[c];
+            return d3;
         }
     </script>
     <!-- END OF OBESITY LINEGRAPH SCRIPT -->
+    
+    <!-- ANNUAL DRUG OD LINEGRAPH SCRIPT -->
+    <script>
+        var svg_od_yearly = d3.select("svg.od-linegraph"),
+            margin6 = {
+                top: 20,
+                right: 60,
+                bottom: 30,
+                left: 35
+            },
+            width6 = svg_od_yearly.attr("width") - margin6.left - margin6.right,
+            height6 = svg_od_yearly.attr("height") - margin6.top - margin6.bottom,
+            g6 = svg_od_yearly.append("g").attr("transform", "translate(" + margin6.left + "," + margin6.top + ")");
+
+        var parseTime6 = d3.timeParse("%Y");
+
+        var x6 = d3.scaleTime().range([0, width6]),
+            y6 = d3.scaleLinear().range([height6, 0]),
+            z6 = d3.scaleOrdinal(d3.schemeCategory10);
+
+        var line6 = d3.line()
+            .curve(d3.curveBasis)
+            .x(function(d) {
+                return x6(d.date);
+            })
+            .y(function(d) {
+                return y6(d.rate);
+            });
+
+        d3.tsv("data/drug-od/drug-od-yearly-data.tsv", type, function(error, data) {
+            if (error) throw error;
+
+            var states6 = data.columns.slice(1).map(function(id) {
+                return {
+                    id: id,
+                    values: data.map(function(d) {
+                        return {
+                            date: d.date,
+                            rate: d[id]
+                        };
+                    })
+                };
+            });
+
+            x6.domain(d3.extent(data, function(d) {
+                return d.date;
+            }));
+
+            y6.domain([
+                d3.min(states6, function(c) {
+                    return d3.min(c.values, function(d) {
+                        return d.rate;
+                    });
+                }),
+                d3.max(states6, function(c) {
+                    return d3.max(c.values, function(d) {
+                        return d.rate;
+                    });
+                })
+            ]);
+
+            z6.domain(states6.map(function(c) {
+                return c.id;
+            }));
+
+            g6.append("g")
+                .attr("class", "axis axis--x")
+                .attr("transform", "translate(0," + height6 + ")")
+                .call(d3.axisBottom(x6));
+
+            g6.append("g")
+                .attr("class", "axis axis--y")
+                .call(d3.axisLeft(y6))
+                .append("text")
+                .attr("transform", "rotate(-90)")
+                .attr("y", 6)
+                .attr("dy", "0.71em")
+                .attr("fill", "#000")
+                .text("Drug OD Rate");
+
+            var state6 = g6.selectAll()
+                .data(states6)
+                .enter().append("g")
+                .attr("class", function(d) {
+                    return "state " + d.id.replace(/\s+/g, '');
+                });
+
+            state6.append("path")
+                .attr("class", "line")
+                .attr("d", function(d) {
+                    return line6(d.values);
+                });
+
+            state6.append("text")
+                .datum(function(d) {
+                    return {
+                        id: d.id,
+                        value: d.values[d.values.length - 1]
+                    };
+                })
+                .attr("transform", function(d) {
+                    return "translate(" + x6(d.value.date) + "," + y6(d.value.rate) + ")";
+                })
+                .attr("x", 1)
+                .attr("dy", "0.35em")
+                .text(function(d) {
+                    return d.id;
+                });
+        });
+
+        function type(d3, _, columns6) {
+            d3.date = parseTime6(d3.date);
+            for (var i = 1, n = columns6.length, c; i < n; ++i) d3[c = columns6[i]] = +d3[c];
+            return d3;
+        }
+    </script>
+    <!-- END OF DRUG OD LINEGRAPH SCRIPT -->
     
 </body>
 

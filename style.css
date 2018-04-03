@@ -190,6 +190,10 @@ p {
     position: relative;
 }
 
+.od-linegraph {
+    display: block!important;
+}
+
 .state.hovered text, .linegraph .state:hover text {
     display: block;
 }
