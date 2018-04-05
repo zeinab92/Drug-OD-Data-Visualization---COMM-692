@@ -70,7 +70,7 @@ d3.csv("data/poverty/poverty-2005.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -182,7 +182,7 @@ d3.csv("data/poverty/poverty-2006.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -248,7 +248,7 @@ d3.csv("data/poverty/poverty-2007.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -315,7 +315,7 @@ d3.csv("data/poverty/poverty-2008.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -381,7 +381,7 @@ d3.csv("data/poverty/poverty-2009.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -447,7 +447,7 @@ d3.csv("data/poverty/poverty-2010.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -513,7 +513,7 @@ d3.csv("data/poverty/poverty-2011.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -579,7 +579,7 @@ d3.csv("data/poverty/poverty-2012.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -645,7 +645,7 @@ d3.csv("data/poverty/poverty-2013.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -711,7 +711,7 @@ d3.csv("data/poverty/poverty-2014.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -777,7 +777,7 @@ d3.csv("data/poverty/poverty-2015.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
@@ -843,7 +843,7 @@ d3.csv("data/poverty/poverty-2016.csv", function (data) {
                 return d.properties.name.replace(/\s+/g, '');
             })
             .on('mouseover', tip2.show)
-            .on('mouseout', tip.hide)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
