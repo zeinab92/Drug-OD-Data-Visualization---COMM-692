@@ -24,7 +24,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
-svg_pov_2006.call(tip);
+svg_pres_2006.call(tip);
 
 d3.csv("data/prescription/prescription-2006.csv", function (data) {
     var dataArray = [];
@@ -146,14 +146,7 @@ var svg_pres_2007 = d3.select(".factor-prescription .factor-tab-2007")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2007.call(tip);
+svg_pres_2007.call(tip);
 
 d3.csv("data/prescription/prescription-2007.csv", function (data) {
     var dataArray = [];
@@ -230,14 +223,7 @@ var svg_pres_2008 = d3.select(".factor-prescription .factor-tab-2008")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2008.call(tip);
+svg_pres_2008.call(tip);
 
 d3.csv("data/prescription/prescription-2008.csv", function (data) {
     var dataArray = [];
@@ -314,14 +300,7 @@ var svg_pres_2009 = d3.select(".factor-prescription .factor-tab-2009")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2009.call(tip);
+svg_pres_2009.call(tip);
 
 d3.csv("data/prescription/prescription-2009.csv", function (data) {
     var dataArray = [];
@@ -398,14 +377,7 @@ var svg_pres_2010 = d3.select(".factor-prescription .factor-tab-2010")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2010.call(tip);
+svg_pres_2010.call(tip);
 
 d3.csv("data/prescription/prescription-2010.csv", function (data) {
     var dataArray = [];
@@ -482,14 +454,7 @@ var svg_pres_2011 = d3.select(".factor-prescription .factor-tab-2011")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2011.call(tip);
+svg_pres_2011.call(tip);
 
 d3.csv("data/prescription/prescription-2011.csv", function (data) {
     var dataArray = [];
@@ -566,14 +531,7 @@ var svg_pres_2012 = d3.select(".factor-prescription .factor-tab-2012")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2012.call(tip);
+svg_pres_2012.call(tip);
 
 d3.csv("data/prescription/prescription-2012.csv", function (data) {
     var dataArray = [];
@@ -650,14 +608,7 @@ var svg_pres_2013 = d3.select(".factor-prescription .factor-tab-2013")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2013.call(tip);
+svg_pres_2013.call(tip);
 
 d3.csv("data/prescription/prescription-2013.csv", function (data) {
     var dataArray = [];
@@ -734,14 +685,7 @@ var svg_pres_2014 = d3.select(".factor-prescription .factor-tab-2014")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2014.call(tip);
+svg_pres_2014.call(tip);
 
 d3.csv("data/prescription/prescription-2014.csv", function (data) {
     var dataArray = [];
@@ -818,14 +762,7 @@ var svg_pres_2015 = d3.select(".factor-prescription .factor-tab-2015")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2015.call(tip);
+svg_pres_2015.call(tip);
 
 d3.csv("data/prescription/prescription-2015.csv", function (data) {
     var dataArray = [];
@@ -902,14 +839,7 @@ var svg_pres_2016 = d3.select(".factor-prescription .factor-tab-2016")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
-    });
-
-svg_pov_2016.call(tip);
+svg_pres_2016.call(tip);
 
 d3.csv("data/prescription/prescription-2016.csv", function (data) {
     var dataArray = [];

@@ -17,14 +17,7 @@ var svg_obes_2005 = d3.select(".factor-obesity .factor-tab-2005")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2005.call(tip);
+svg_obes_2005.call(tip2);
 
 d3.csv("data/obesity/obesity-2005.csv", function (data) {
     var dataArray = [];
@@ -60,8 +53,8 @@ d3.csv("data/obesity/obesity-2005.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -135,14 +128,7 @@ var svg_obes_2006 = d3.select(".factor-obesity .factor-tab-2006")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2006.call(tip);
+svg_obes_2006.call(tip2);
 
 d3.csv("data/obesity/obesity-2006.csv", function (data) {
     var dataArray = [];
@@ -178,8 +164,8 @@ d3.csv("data/obesity/obesity-2006.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -208,14 +194,7 @@ var svg_obes_2007 = d3.select(".factor-obesity .factor-tab-2007")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2007.call(tip);
+svg_obes_2007.call(tip2);
 
 d3.csv("data/obesity/obesity-2007.csv", function (data) {
     var dataArray = [];
@@ -251,8 +230,8 @@ d3.csv("data/obesity/obesity-2007.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -281,14 +260,7 @@ var svg_obes_2008 = d3.select(".factor-obesity .factor-tab-2008")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2008.call(tip);
+svg_obes_2008.call(tip2);
 
 d3.csv("data/obesity/obesity-2008.csv", function (data) {
     var dataArray = [];
@@ -324,8 +296,8 @@ d3.csv("data/obesity/obesity-2008.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -354,14 +326,7 @@ var svg_obes_2009 = d3.select(".factor-obesity .factor-tab-2009")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2009.call(tip);
+svg_obes_2009.call(tip2);
 
 d3.csv("data/obesity/obesity-2009.csv", function (data) {
     var dataArray = [];
@@ -397,8 +362,8 @@ d3.csv("data/obesity/obesity-2009.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -427,14 +392,7 @@ var svg_obes_2010 = d3.select(".factor-obesity .factor-tab-2010")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2010.call(tip);
+svg_obes_2010.call(tip2);
 
 d3.csv("data/obesity/obesity-2010.csv", function (data) {
     var dataArray = [];
@@ -470,8 +428,8 @@ d3.csv("data/obesity/obesity-2010.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -500,14 +458,7 @@ var svg_obes_2011 = d3.select(".factor-obesity .factor-tab-2011")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2011.call(tip);
+svg_obes_2011.call(tip2);
 
 d3.csv("data/obesity/obesity-2011.csv", function (data) {
     var dataArray = [];
@@ -543,8 +494,8 @@ d3.csv("data/obesity/obesity-2011.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -573,14 +524,7 @@ var svg_obes_2012 = d3.select(".factor-obesity .factor-tab-2012")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2012.call(tip);
+svg_obes_2012.call(tip2);
 
 d3.csv("data/obesity/obesity-2012.csv", function (data) {
     var dataArray = [];
@@ -616,8 +560,8 @@ d3.csv("data/obesity/obesity-2012.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -646,14 +590,7 @@ var svg_obes_2013 = d3.select(".factor-obesity .factor-tab-2013")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2013.call(tip);
+svg_obes_2013.call(tip2);
 
 d3.csv("data/obesity/obesity-2013.csv", function (data) {
     var dataArray = [];
@@ -689,8 +626,8 @@ d3.csv("data/obesity/obesity-2013.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -719,14 +656,7 @@ var svg_obes_2014 = d3.select(".factor-obesity .factor-tab-2014")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2014.call(tip);
+svg_obes_2014.call(tip2);
 
 d3.csv("data/obesity/obesity-2014.csv", function (data) {
     var dataArray = [];
@@ -762,8 +692,8 @@ d3.csv("data/obesity/obesity-2014.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -792,14 +722,7 @@ var svg_obes_2015 = d3.select(".factor-obesity .factor-tab-2015")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2015.call(tip);
+svg_obes_2015.call(tip2);
 
 d3.csv("data/obesity/obesity-2015.csv", function (data) {
     var dataArray = [];
@@ -835,8 +758,8 @@ d3.csv("data/obesity/obesity-2015.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");
@@ -865,14 +788,7 @@ var svg_obes_2016 = d3.select(".factor-obesity .factor-tab-2016")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_obes_2016.call(tip);
+svg_obes_2016.call(tip2);
 
 d3.csv("data/obesity/obesity-2016.csv", function (data) {
     var dataArray = [];
@@ -908,8 +824,8 @@ d3.csv("data/obesity/obesity-2016.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".obesity-linegraph").find(state_hover).addClass("hovered");

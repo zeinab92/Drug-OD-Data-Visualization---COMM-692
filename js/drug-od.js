@@ -17,13 +17,6 @@ var svg_od_2005 = d3.select(".factor-od .factor-tab-2005")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2005.call(tip);
 
 d3.csv("data/drug-od/drug-od-2005.csv", function (data) {
@@ -135,13 +128,6 @@ var svg_od_2006 = d3.select(".factor-od .factor-tab-2006")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2006.call(tip);
 
 d3.csv("data/drug-od/drug-od-2006.csv", function (data) {
@@ -207,13 +193,6 @@ var svg_od_2007 = d3.select(".factor-od .factor-tab-2007")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
 
 svg_od_2007.call(tip);
 
@@ -281,13 +260,6 @@ var svg_od_2008 = d3.select(".factor-od .factor-tab-2008")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2008.call(tip);
 
 d3.csv("data/drug-od/drug-od-2008.csv", function (data) {
@@ -353,13 +325,6 @@ var svg_od_2009 = d3.select(".factor-od .factor-tab-2009")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
 
 svg_od_2009.call(tip);
 
@@ -427,13 +392,6 @@ var svg_od_2010 = d3.select(".factor-od .factor-tab-2010")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2010.call(tip);
 
 d3.csv("data/drug-od/drug-od-2010.csv", function (data) {
@@ -499,13 +457,6 @@ var svg_od_2011 = d3.select(".factor-od .factor-tab-2011")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
 
 svg_od_2011.call(tip);
 
@@ -573,13 +524,6 @@ var svg_od_2012 = d3.select(".factor-od .factor-tab-2012")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2012.call(tip);
 
 d3.csv("data/drug-od/drug-od-2012.csv", function (data) {
@@ -645,13 +589,6 @@ var svg_od_2013 = d3.select(".factor-od .factor-tab-2013")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
 
 svg_od_2013.call(tip);
 
@@ -719,13 +656,6 @@ var svg_od_2014 = d3.select(".factor-od .factor-tab-2014")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2014.call(tip);
 
 d3.csv("data/drug-od/drug-od-2014.csv", function (data) {
@@ -792,13 +722,6 @@ var svg_od_2015 = d3.select(".factor-od .factor-tab-2015")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
 svg_od_2015.call(tip);
 
 d3.csv("data/drug-od/drug-od-2015.csv", function (data) {
@@ -864,13 +787,6 @@ var svg_od_2016 = d3.select(".factor-od .factor-tab-2016")
     .append("svg")
     .attr("width", width)
     .attr("height", height);
-
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
 
 svg_od_2016.call(tip);
 

@@ -21,14 +21,7 @@ var svg_pov_2005 = d3.select(".factor-poverty .factor-tab-2005")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2005.call(tip);
+svg_pov_2005.call(tip2);
 
 // Load in my states data!
 d3.csv("data/poverty/poverty-2005.csv", function (data) {
@@ -76,7 +69,7 @@ d3.csv("data/poverty/poverty-2005.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -149,14 +142,7 @@ var svg_pov_2006 = d3.select(".factor-poverty .factor-tab-2006")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2006.call(tip);
+svg_pov_2006.call(tip2);
 
 d3.csv("data/poverty/poverty-2006.csv", function (data) {
     var dataArray = [];
@@ -195,7 +181,7 @@ d3.csv("data/poverty/poverty-2006.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -222,14 +208,7 @@ var svg_pov_2007 = d3.select(".factor-poverty .factor-tab-2007")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2007.call(tip);
+svg_pov_2007.call(tip2);
 
 d3.csv("data/poverty/poverty-2007.csv", function (data) {
     var dataArray = [];
@@ -268,7 +247,7 @@ d3.csv("data/poverty/poverty-2007.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -295,14 +274,7 @@ var svg_pov_2008 = d3.select(".factor-poverty .factor-tab-2008")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2008.call(tip);
+svg_pov_2008.call(tip2);
 
 // Load in my states data!
 d3.csv("data/poverty/poverty-2008.csv", function (data) {
@@ -342,7 +314,7 @@ d3.csv("data/poverty/poverty-2008.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -369,14 +341,7 @@ var svg_pov_2009 = d3.select(".factor-poverty .factor-tab-2009")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2009.call(tip);
+svg_pov_2009.call(tip2);
 
 d3.csv("data/poverty/poverty-2009.csv", function (data) {
     var dataArray = [];
@@ -415,7 +380,7 @@ d3.csv("data/poverty/poverty-2009.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -442,14 +407,7 @@ var svg_pov_2010 = d3.select(".factor-poverty .factor-tab-2010")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2010.call(tip);
+svg_pov_2010.call(tip2);
 
 d3.csv("data/poverty/poverty-2010.csv", function (data) {
     var dataArray = [];
@@ -488,7 +446,7 @@ d3.csv("data/poverty/poverty-2010.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -515,14 +473,7 @@ var svg_pov_2011 = d3.select(".factor-poverty .factor-tab-2011")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2011.call(tip);
+svg_pov_2011.call(tip2);
 
 d3.csv("data/poverty/poverty-2011.csv", function (data) {
     var dataArray = [];
@@ -561,7 +512,7 @@ d3.csv("data/poverty/poverty-2011.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -588,14 +539,7 @@ var svg_pov_2012 = d3.select(".factor-poverty .factor-tab-2012")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2012.call(tip);
+svg_pov_2012.call(tip2);
 
 d3.csv("data/poverty/poverty-2012.csv", function (data) {
     var dataArray = [];
@@ -634,7 +578,7 @@ d3.csv("data/poverty/poverty-2012.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -661,14 +605,7 @@ var svg_pov_2013 = d3.select(".factor-poverty .factor-tab-2013")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2013.call(tip);
+svg_pov_2013.call(tip2);
 
 d3.csv("data/poverty/poverty-2013.csv", function (data) {
     var dataArray = [];
@@ -707,7 +644,7 @@ d3.csv("data/poverty/poverty-2013.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -734,14 +671,7 @@ var svg_pov_2014 = d3.select(".factor-poverty .factor-tab-2014")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2014.call(tip);
+svg_pov_2014.call(tip2);
 
 d3.csv("data/poverty/poverty-2014.csv", function (data) {
     var dataArray = [];
@@ -780,7 +710,7 @@ d3.csv("data/poverty/poverty-2014.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -807,14 +737,7 @@ var svg_pov_2015 = d3.select(".factor-poverty .factor-tab-2015")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2015.call(tip);
+svg_pov_2015.call(tip2);
 
 d3.csv("data/poverty/poverty-2015.csv", function (data) {
     var dataArray = [];
@@ -853,7 +776,7 @@ d3.csv("data/poverty/poverty-2015.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -880,14 +803,7 @@ var svg_pov_2016 = d3.select(".factor-poverty .factor-tab-2016")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_pov_2016.call(tip);
+svg_pov_2016.call(tip2);
 
 d3.csv("data/poverty/poverty-2016.csv", function (data) {
     var dataArray = [];
@@ -926,7 +842,7 @@ d3.csv("data/poverty/poverty-2016.csv", function (data) {
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
             })
-            .on('mouseover', tip.show)
+            .on('mouseover', tip2.show)
             .on('mouseout', tip.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -944,8 +860,3 @@ d3.csv("data/poverty/poverty-2016.csv", function (data) {
     });
 });
 //END OF POVERTY 2016
-
-
-//POVERTY YEARLY LINE GRAPH
-
-//END OF POVERTY YEARLY LINE GRAPH
