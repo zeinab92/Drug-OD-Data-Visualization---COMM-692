@@ -112,6 +112,14 @@ p {
     font-weight: normal;
 }
 
+.factor-tab p {
+    font-size: 11px;
+    position: absolute;
+    bottom: -50px;
+    padding-left: 25px;
+    margin: 0;
+}
+
 .factor-od {
     display: block!important;
 }
