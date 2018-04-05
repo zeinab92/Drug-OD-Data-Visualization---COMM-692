@@ -2,8 +2,8 @@
 var width = 600;
 var height = 350;
 
-var lowColor = '#F9CE4D'
-var highColor = '#BE1F24'
+var lowColor2 = '#BE1F24'
+var highColor2 = '#F9CE4D'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
@@ -17,23 +17,16 @@ var svg_edu_2005 = d3.select(".factor-edu .factor-tab-2005")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2005.call(tip);
+svg_edu_2005.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2005.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 90
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -60,8 +53,8 @@ d3.csv("data/hs-graduates/hs-graduates-2005.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -99,12 +92,12 @@ d3.csv("data/hs-graduates/hs-graduates-2005.csv", function (data) {
 
         legend.append("stop")
             .attr("offset", "0%")
-            .attr("stop-color", highColor)
+            .attr("stop-color", highColor2)
             .attr("stop-opacity", 1);
 
         legend.append("stop")
             .attr("offset", "100%")
-            .attr("stop-color", lowColor)
+            .attr("stop-color", lowColor2)
             .attr("stop-opacity", 1);
 
         key.append("rect")
@@ -135,23 +128,16 @@ var svg_edu_2006 = d3.select(".factor-edu .factor-tab-2006")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2006.call(tip);
+svg_edu_2006.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2006.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -178,8 +164,8 @@ d3.csv("data/hs-graduates/hs-graduates-2006.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -213,9 +199,9 @@ d3.csv("data/hs-graduates/hs-graduates-2007.csv", function (data) {
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -242,8 +228,8 @@ d3.csv("data/hs-graduates/hs-graduates-2007.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -272,23 +258,16 @@ var svg_edu_2008 = d3.select(".factor-edu .factor-tab-2008")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2008.call(tip);
+svg_edu_2008.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2008.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -315,8 +294,8 @@ d3.csv("data/hs-graduates/hs-graduates-2008.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -345,23 +324,16 @@ var svg_edu_2009 = d3.select(".factor-edu .factor-tab-2009")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2009.call(tip);
+svg_edu_2009.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2009.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -388,8 +360,8 @@ d3.csv("data/hs-graduates/hs-graduates-2009.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -418,23 +390,16 @@ var svg_edu_2010 = d3.select(".factor-edu .factor-tab-2010")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2010.call(tip);
+svg_edu_2010.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2010.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -461,8 +426,8 @@ d3.csv("data/hs-graduates/hs-graduates-2010.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -491,23 +456,16 @@ var svg_edu_2011 = d3.select(".factor-edu .factor-tab-2011")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2011.call(tip);
+svg_edu_2011.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2011.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -534,8 +492,8 @@ d3.csv("data/hs-graduates/hs-graduates-2011.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -564,23 +522,16 @@ var svg_edu_2012 = d3.select(".factor-edu .factor-tab-2012")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2012.call(tip);
+svg_edu_2012.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2012.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -607,8 +558,8 @@ d3.csv("data/hs-graduates/hs-graduates-2012.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -637,23 +588,16 @@ var svg_edu_2013 = d3.select(".factor-edu .factor-tab-2013")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2013.call(tip);
+svg_edu_2013.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2013.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -680,8 +624,8 @@ d3.csv("data/hs-graduates/hs-graduates-2013.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -710,23 +654,16 @@ var svg_edu_2014 = d3.select(".factor-edu .factor-tab-2014")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2014.call(tip);
+svg_edu_2014.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2014.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -753,8 +690,8 @@ d3.csv("data/hs-graduates/hs-graduates-2014.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -783,23 +720,16 @@ var svg_edu_2015 = d3.select(".factor-edu .factor-tab-2015")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2015.call(tip);
+svg_edu_2015.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2015.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -826,8 +756,8 @@ d3.csv("data/hs-graduates/hs-graduates-2015.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");
@@ -856,23 +786,16 @@ var svg_edu_2016 = d3.select(".factor-edu .factor-tab-2016")
     .attr("width", width)
     .attr("height", height);
 
-var tip = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
-    });
-
-svg_edu_2016.call(tip);
+svg_edu_2016.call(tip2);
 
 d3.csv("data/hs-graduates/hs-graduates-2016.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 58
-    var maxVal = 96
-    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
+    var minVal = 40
+    var maxVal = 88
+    var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor2, highColor2])
 
     d3.json("us-states.json", function (json) {
 
@@ -899,8 +822,8 @@ d3.csv("data/hs-graduates/hs-graduates-2016.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".edu-linegraph").find(state_hover).addClass("hovered");

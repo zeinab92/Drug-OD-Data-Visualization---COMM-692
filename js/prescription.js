@@ -21,7 +21,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2006.call(tip);
@@ -150,7 +150,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2007.call(tip);
@@ -234,7 +234,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2008.call(tip);
@@ -318,7 +318,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2009.call(tip);
@@ -402,7 +402,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2010.call(tip);
@@ -486,7 +486,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2011.call(tip);
@@ -570,7 +570,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2012.call(tip);
@@ -654,7 +654,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2013.call(tip);
@@ -738,7 +738,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2014.call(tip);
@@ -822,7 +822,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2015.call(tip);
@@ -906,7 +906,7 @@ var tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
     });
 
 svg_pov_2016.call(tip);
