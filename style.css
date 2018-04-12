@@ -62,8 +62,8 @@ p {
 .factor-tab-btn {
     background: #f0f0f0;
     cursor: pointer;
-    height: 80px;
-    line-height: 80px;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
     font-weight: 500;
     font-size: 13px;
@@ -82,7 +82,7 @@ p {
 
 .line-graph-wrapper {
     width: 43%;
-    padding: 25px 0;
+    padding: 0;
     text-align: center;
 }
 
@@ -96,10 +96,10 @@ p {
 
 .factor-tab label {
     display: block;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
-    margin-bottom: 15px;
-    line-height: 20px;
+    margin-bottom: -20px;
+    line-height: 18px;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Roboto Slab', serif;
@@ -115,7 +115,7 @@ p {
 .factor-tab p {
     font-size: 11px;
     position: absolute;
-    bottom: -50px;
+    bottom: -20px;
     padding-left: 25px;
     margin: 0;
 }
@@ -125,13 +125,15 @@ p {
 }
 
 #slider {
-    margin: 4.5em auto;
-    width: 90%;
+    margin: 3.5em auto;
+    width: 87%;
+    padding-right: 50px;
+    margin-right: 8%;
 }
 
 #slider label {
     margin-left: -10px;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 20px;
     position: absolute;
     text-align: center;
@@ -141,8 +143,8 @@ p {
 
 .legend {
     position: absolute;
-    right: -20px;
-    top: 105px;
+    right: 20px;
+    top: 55px;
     width: 65px;
     overflow: visible;
 }
@@ -208,6 +210,7 @@ p {
 
 .od-linegraph {
     display: block!important;
+    margin-top: 5.5em;
 }
 
 .state.hovered text, .linegraph .state:hover text {

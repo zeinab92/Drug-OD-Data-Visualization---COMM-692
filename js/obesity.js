@@ -1,13 +1,13 @@
 //OBESITY 2005
 var width = 600;
-var height = 350;
+var height = 300;
 
-var lowColor = '#F9CE4D'
-var highColor = '#BE1F24'
+var lowColor = 'rgb(249, 206, 77)'
+var highColor = 'rgb(190, 31, 36)'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection);
@@ -73,7 +73,7 @@ d3.csv("data/obesity/obesity-2005.csv", function (data) {
             });
 
         var w = 140,
-            h = 300;
+            h = 250;
 
         var key = d3.select(".factor-obesity")
             .append("svg")

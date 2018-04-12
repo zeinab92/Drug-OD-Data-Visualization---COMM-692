@@ -1,15 +1,13 @@
 //POVERTY 2005
-//Width and height of map
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
-// D3 Projection
 var projection = d3.geoAlbersUsa()
-    .translate([width / 2, height / 2]) // translate to center of screen
-    .scale([800]); // scale things down so see entire US
+    .translate([width / 2, height / 2])
+    .scale([600]);
 
 // Define path generator
 var path = d3.geoPath() // path generator that will convert GeoJSON to SVG paths
@@ -87,7 +85,7 @@ d3.csv("data/poverty/poverty-2005.csv", function (data) {
 
         // add a legend
         var w = 140,
-            h = 300;
+            h = 250;
 
         var key = d3.select(".factor-poverty")
             .append("svg")

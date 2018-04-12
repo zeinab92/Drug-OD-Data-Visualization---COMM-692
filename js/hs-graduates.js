@@ -1,13 +1,12 @@
-//EDUCATION 2005
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor2 = '#BE1F24'
 var highColor2 = '#F9CE4D'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection);
@@ -73,7 +72,7 @@ d3.csv("data/hs-graduates/hs-graduates-2005.csv", function (data) {
             });
 
         var w = 140,
-            h = 300;
+            h = 250;
 
         var key = d3.select(".factor-edu")
             .append("svg")

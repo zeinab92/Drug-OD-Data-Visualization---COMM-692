@@ -1,13 +1,13 @@
 //MENTAL FACILITY 2006
-var width = 600;
-var height = 350;
+var width = 500;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([500]);
 
 var path = d3.geoPath()
     .projection(projection); 

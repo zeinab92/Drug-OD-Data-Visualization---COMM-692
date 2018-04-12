@@ -1,13 +1,13 @@
 //PERSCRIPTION 2006
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -80,7 +80,7 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
             });
 
         var w = 140,
-            h = 300;
+            h = 250;
 
         var key = d3.select(".factor-prescription")
             .append("svg")
@@ -129,14 +129,14 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
 
 //PERSCRIPTION 2007
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -206,14 +206,14 @@ d3.csv("data/prescription/prescription-2007.csv", function (data) {
 
 //PERSCRIPTION 2008
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -283,14 +283,14 @@ d3.csv("data/prescription/prescription-2008.csv", function (data) {
 
 //PERSCRIPTION 2009
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -360,14 +360,14 @@ d3.csv("data/prescription/prescription-2009.csv", function (data) {
 
 //PERSCRIPTION 2010
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -437,14 +437,14 @@ d3.csv("data/prescription/prescription-2010.csv", function (data) {
 
 //PERSCRIPTION 2011
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -514,14 +514,14 @@ d3.csv("data/prescription/prescription-2011.csv", function (data) {
 
 //PERSCRIPTION 2012
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -591,14 +591,14 @@ d3.csv("data/prescription/prescription-2012.csv", function (data) {
 
 //PERSCRIPTION 2013
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -668,14 +668,14 @@ d3.csv("data/prescription/prescription-2013.csv", function (data) {
 
 //PERSCRIPTION 2014
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -745,14 +745,14 @@ d3.csv("data/prescription/prescription-2014.csv", function (data) {
 
 //PERSCRIPTION 2015
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 
@@ -822,14 +822,14 @@ d3.csv("data/prescription/prescription-2015.csv", function (data) {
 
 //PERSCRIPTION 2016
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
+    .scale([600]);
 
 var path = d3.geoPath()
     .projection(projection); 

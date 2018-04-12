@@ -1,14 +1,13 @@
 //DIVORCE 2005
 var width = 600;
-var height = 350;
+var height = 300;
 
 var lowColor = '#F9CE4D'
 var highColor = '#BE1F24'
 
 var projection = d3.geoAlbersUsa()
     .translate([width / 2, height / 2])
-    .scale([800]);
-
+    .scale([600]);
 var path = d3.geoPath()
     .projection(projection);
 
@@ -24,7 +23,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2005.call(tip);
+svg_div_2005.call(tip2);
 
 d3.csv("data/divorce/divorce-2005.csv", function (data) {
     var dataArray = [];
@@ -60,8 +59,8 @@ d3.csv("data/divorce/divorce-2005.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -80,7 +79,7 @@ d3.csv("data/divorce/divorce-2005.csv", function (data) {
             });
 
         var w = 140,
-            h = 300;
+            h = 250;
 
         var key = d3.select(".factor-divorce")
             .append("svg")
@@ -142,7 +141,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2006.call(tip);
+svg_div_2006.call(tip2);
 
 d3.csv("data/divorce/divorce-2006.csv", function (data) {
     var dataArray = [];
@@ -178,8 +177,8 @@ d3.csv("data/divorce/divorce-2006.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -215,7 +214,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2007.call(tip);
+svg_div_2007.call(tip2);
 
 d3.csv("data/divorce/divorce-2007.csv", function (data) {
     var dataArray = [];
@@ -251,8 +250,8 @@ d3.csv("data/divorce/divorce-2007.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -288,7 +287,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2008.call(tip);
+svg_div_2008.call(tip2);
 
 d3.csv("data/divorce/divorce-2008.csv", function (data) {
     var dataArray = [];
@@ -324,8 +323,8 @@ d3.csv("data/divorce/divorce-2008.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -361,7 +360,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2009.call(tip);
+svg_div_2009.call(tip2);
 
 d3.csv("data/divorce/divorce-2009.csv", function (data) {
     var dataArray = [];
@@ -397,8 +396,8 @@ d3.csv("data/divorce/divorce-2009.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -434,7 +433,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2010.call(tip);
+svg_div_2010.call(tip2);
 
 d3.csv("data/divorce/divorce-2010.csv", function (data) {
     var dataArray = [];
@@ -470,8 +469,8 @@ d3.csv("data/divorce/divorce-2010.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -507,7 +506,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2011.call(tip);
+svg_div_2011.call(tip2);
 
 d3.csv("data/divorce/divorce-2011.csv", function (data) {
     var dataArray = [];
@@ -543,8 +542,8 @@ d3.csv("data/divorce/divorce-2011.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -580,7 +579,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2012.call(tip);
+svg_div_2012.call(tip2);
 
 d3.csv("data/divorce/divorce-2012.csv", function (data) {
     var dataArray = [];
@@ -616,8 +615,8 @@ d3.csv("data/divorce/divorce-2012.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -653,7 +652,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2013.call(tip);
+svg_div_2013.call(tip2);
 
 d3.csv("data/divorce/divorce-2013.csv", function (data) {
     var dataArray = [];
@@ -689,8 +688,8 @@ d3.csv("data/divorce/divorce-2013.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -726,7 +725,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2014.call(tip);
+svg_div_2014.call(tip2);
 
 d3.csv("data/divorce/divorce-2014.csv", function (data) {
     var dataArray = [];
@@ -762,8 +761,8 @@ d3.csv("data/divorce/divorce-2014.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -799,7 +798,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2015.call(tip);
+svg_div_2015.call(tip2);
 
 d3.csv("data/divorce/divorce-2015.csv", function (data) {
     var dataArray = [];
@@ -835,8 +834,8 @@ d3.csv("data/divorce/divorce-2015.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
@@ -872,7 +871,7 @@ var tip = d3.tip()
         return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_div_2016.call(tip);
+svg_div_2016.call(tip2);
 
 d3.csv("data/divorce/divorce-2016.csv", function (data) {
     var dataArray = [];
@@ -908,8 +907,8 @@ d3.csv("data/divorce/divorce-2016.csv", function (data) {
             .enter()
             .append("path")
             .attr("d", path)
-            .on('mouseover', tip.show)
-            .on('mouseout', tip.hide)
+            .on('mouseover', tip2.show)
+            .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
