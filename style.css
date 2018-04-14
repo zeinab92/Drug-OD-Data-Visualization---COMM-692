@@ -220,6 +220,11 @@ p {
 .state.hovered .line, .linegraph .state:hover .line {
     stroke: rgba(0,0,0,0.8);
     stroke-width: 4px;
+    z-index: 99999;
+}
+
+.linegraph .state:hover .line {
+    stroke: rgba(0,0,0,0.8)!important;
 }
 
 .tick{

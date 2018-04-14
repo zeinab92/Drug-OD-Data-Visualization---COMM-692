@@ -72,6 +72,7 @@ d3.csv("data/poverty/poverty-2005.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", "red");
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
@@ -184,10 +185,12 @@ d3.csv("data/poverty/poverty-2006.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -250,10 +253,12 @@ d3.csv("data/poverty/poverty-2007.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -317,10 +322,12 @@ d3.csv("data/poverty/poverty-2008.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -383,10 +390,12 @@ d3.csv("data/poverty/poverty-2009.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -449,10 +458,12 @@ d3.csv("data/poverty/poverty-2010.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -515,10 +526,12 @@ d3.csv("data/poverty/poverty-2011.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -581,10 +594,12 @@ d3.csv("data/poverty/poverty-2012.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -647,10 +662,12 @@ d3.csv("data/poverty/poverty-2013.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -713,10 +730,12 @@ d3.csv("data/poverty/poverty-2014.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -779,10 +798,12 @@ d3.csv("data/poverty/poverty-2015.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -845,10 +866,12 @@ d3.csv("data/poverty/poverty-2016.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".poverty-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")

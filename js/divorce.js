@@ -64,10 +64,12 @@ d3.csv("data/divorce/divorce-2005.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -182,10 +184,12 @@ d3.csv("data/divorce/divorce-2006.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -255,10 +259,12 @@ d3.csv("data/divorce/divorce-2007.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -328,10 +334,12 @@ d3.csv("data/divorce/divorce-2008.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -401,10 +409,12 @@ d3.csv("data/divorce/divorce-2009.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -474,10 +484,12 @@ d3.csv("data/divorce/divorce-2010.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -547,10 +559,12 @@ d3.csv("data/divorce/divorce-2011.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -620,10 +634,12 @@ d3.csv("data/divorce/divorce-2012.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -693,10 +709,12 @@ d3.csv("data/divorce/divorce-2013.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -766,10 +784,12 @@ d3.csv("data/divorce/divorce-2014.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -839,10 +859,12 @@ d3.csv("data/divorce/divorce-2015.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
@@ -912,10 +934,12 @@ d3.csv("data/divorce/divorce-2016.csv", function (data) {
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).addClass("hovered");
+                $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
                 $(".divorce-linegraph").find(state_hover).removeClass("hovered");
+                $(".line").css("stroke", "rgba(0,0,0,0.1)");
             })
             .attr("class", function (d) {
                 return d.properties.name.replace(/\s+/g, '');
