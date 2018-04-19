@@ -38,11 +38,16 @@ header h1 {
     font-size: 40px;
 }
 
-p {
+p, ul {
     font-size: 18px;
     line-height: 28px;
     max-width: 780px;
     margin: 15px auto 1.5em;
+}
+
+ul {
+    margin-top: -25px;
+    padding-left: 40px;
 }
 
 .wrapper {
