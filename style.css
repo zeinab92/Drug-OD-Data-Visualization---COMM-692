@@ -137,7 +137,7 @@ ul {
     margin: 0;
 }
 
-.factor-od, .factor-od-bottom {
+.factor-od, .factor-od-bottom, .factor-all {
     display: block!important;
 }
 
