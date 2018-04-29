@@ -47,7 +47,7 @@ p, ul {
 
 ul {
     margin-top: -25px;
-    padding-left: 40px;
+    padding-left: 45px;
 }
 
 .wrapper {
@@ -61,14 +61,14 @@ ul {
 }
 
 .factor-tabs-wrapper {
-    width: 10%;
+    width: 11%;
 }
 
 .factor-tab-btn {
     background: #f0f0f0;
     cursor: pointer;
-    height: 65px;
-    line-height: 65px;
+    height: 70px;
+    line-height: 70px;
     text-align: center;
     font-weight: 500;
     font-size: 13px;
@@ -79,14 +79,14 @@ ul {
 }
 
 .tabs-wrapper {
-    padding-left: 1%;
+    padding-left: 3%;
     padding-right: 3%;
     position: relative;
-    width: 57%;
+    width: 52.5%;
 }
 
 .line-graph-wrapper {
-    width: 43%;
+    width: 34%;
     padding: 0;
     text-align: center;
 }
@@ -125,18 +125,18 @@ ul {
     margin: 0;
 }
 
-.factor-od {
+.factor-od, .factor-od-bottom {
     display: block!important;
 }
 
-#slider {
+#slider, #slider-bottom {
     margin: 3.5em auto;
     width: 87%;
     padding-right: 50px;
     margin-right: 8%;
 }
 
-#slider label {
+#slider label, #slider-bottom label {
     margin-left: -10px;
     font-size: 13px;
     margin-top: 20px;
@@ -148,7 +148,7 @@ ul {
 
 .legend {
     position: absolute;
-    right: 20px;
+    right: 30px;
     top: 55px;
     width: 65px;
     overflow: visible;
@@ -241,9 +241,4 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-.facility-map {
-    max-width: 50%;
-    position: relative;
 }

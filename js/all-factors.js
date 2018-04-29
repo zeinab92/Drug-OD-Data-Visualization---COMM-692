@@ -1,25 +1,38 @@
-//PERSCRIPTION 2006
-var svg_pres_2006 = d3.select(".factor-prescription .factor-tab-2006")
-    .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+//ALL FACTORS 2006
+var width2 = 600;
+var height2 = 300;
 
-var tip = d3.tip()
+var lowColor = '#F9CE4D'
+var highColor = '#BE1F24'
+
+var projection2 = d3.geoAlbersUsa()
+    .translate([width2 / 2, height2 / 2])
+    .scale([600]);
+
+var path2 = d3.geoPath()
+    .projection(projection2);
+
+var svg_all_2006 = d3.select(".factor-all .factor-tab-2006")
+    .append("svg")
+    .attr("width", width2)
+    .attr("height", height2);
+
+var tip2 = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<span>" + d.properties.name + ": " + d.properties.value + "</span>";
+        return "<span>" + d.properties.name + ": " + d.properties.value + "%" + "</span>";
     });
 
-svg_pres_2006.call(tip);
+svg_all_2006.call(tip2);
 
-d3.csv("data/prescription/prescription-2006.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2006.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -42,25 +55,25 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
             }
         }
 
-        svg_pres_2006.selectAll("path")
+        svg_all_2006.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
@@ -71,7 +84,7 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
         var w = 140,
             h = 250;
 
-        var key = d3.select(".factor-prescription")
+        var key = d3.select(".factor-all")
             .append("svg")
             .attr("width", w)
             .attr("height", h)
@@ -79,7 +92,7 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
 
         var legend = key.append("defs")
             .append("svg:linearGradient")
-            .attr("id", "gradient-pres")
+            .attr("id", "gradient-all")
             .attr("x1", "100%")
             .attr("y1", "0%")
             .attr("x2", "100%")
@@ -99,7 +112,7 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
         key.append("rect")
             .attr("width", w - 100)
             .attr("height", h)
-            .style("fill", "url(#gradient-pres)")
+            .style("fill", "url(#gradient-all)")
             .attr("transform", "translate(0,10)");
 
         var y = d3.scaleLinear()
@@ -111,26 +124,26 @@ d3.csv("data/prescription/prescription-2006.csv", function (data) {
         key.append("g")
             .attr("class", "y axis")
             .attr("transform", "translate(21,10)")
-            .call(yAxis)        
+            .call(yAxis)
     });
 });
-//END OF PERSCRIPTION 2006
+//END OF ALL FACTORS 2006
 
-//PERSCRIPTION 2007
-var svg_pres_2007 = d3.select(".factor-prescription .factor-tab-2007")
+//ALL FACTORS 2007
+var svg_all_2007 = d3.select(".factor-all .factor-tab-2007")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2007.call(tip);
+svg_all_2007.call(tip2);
 
-d3.csv("data/prescription/prescription-2007.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2007.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -153,50 +166,40 @@ d3.csv("data/prescription/prescription-2007.csv", function (data) {
             }
         }
 
-        svg_pres_2007.selectAll("path")
+        svg_all_2007.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
-            .on('mouseenter', function (d) {
-                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
-                $(".hovered .line").css("stroke", ramp(d.properties.value));
-            })
-            .on('mouseleave', function (d) {
-                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
-                $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2007
+//END OF ALL FACTORS 2007
 
-//PERSCRIPTION 2008
-var svg_pres_2008 = d3.select(".factor-prescription .factor-tab-2008")
+//ALL FACTORS 2008
+var svg_all_2008 = d3.select(".factor-all .factor-tab-2008")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2008.call(tip);
+svg_all_2008.call(tip2);
 
-d3.csv("data/prescription/prescription-2008.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2008.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -219,50 +222,40 @@ d3.csv("data/prescription/prescription-2008.csv", function (data) {
             }
         }
 
-        svg_pres_2008.selectAll("path")
+        svg_all_2008.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
-            .on('mouseenter', function (d) {
-                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
-                $(".hovered .line").css("stroke", ramp(d.properties.value));
-            })
-            .on('mouseleave', function (d) {
-                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
-                $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2008
+//END OF ALL FACTORS 2008
 
-//PERSCRIPTION 2009
-var svg_pres_2009 = d3.select(".factor-prescription .factor-tab-2009")
+//ALL FACTORS 2009
+var svg_all_2009 = d3.select(".factor-all .factor-tab-2009")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2009.call(tip);
+svg_all_2009.call(tip2);
 
-d3.csv("data/prescription/prescription-2009.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2009.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -285,50 +278,40 @@ d3.csv("data/prescription/prescription-2009.csv", function (data) {
             }
         }
 
-        svg_pres_2009.selectAll("path")
+        svg_all_2009.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
-            .on('mouseenter', function (d) {
-                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
-                $(".hovered .line").css("stroke", ramp(d.properties.value));
-            })
-            .on('mouseleave', function (d) {
-                var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
-                $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2009
+//END OF ALL FACTORS 2009
 
-//PERSCRIPTION 2010
-var svg_pres_2010 = d3.select(".factor-prescription .factor-tab-2010")
+//ALL FACTORS 2010
+var svg_all_2010 = d3.select(".factor-all .factor-tab-2010")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2010.call(tip);
+svg_all_2010.call(tip2);
 
-d3.csv("data/prescription/prescription-2010.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2010.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -351,50 +334,50 @@ d3.csv("data/prescription/prescription-2010.csv", function (data) {
             }
         }
 
-        svg_pres_2010.selectAll("path")
+        svg_all_2010.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2010
+//END OF ALL FACTORS 2010
 
-//PERSCRIPTION 2011
-var svg_pres_2011 = d3.select(".factor-prescription .factor-tab-2011")
+//ALL FACTORS 2011
+var svg_all_2011 = d3.select(".factor-all .factor-tab-2011")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2011.call(tip);
+svg_all_2011.call(tip2);
 
-d3.csv("data/prescription/prescription-2011.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2011.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -417,50 +400,50 @@ d3.csv("data/prescription/prescription-2011.csv", function (data) {
             }
         }
 
-        svg_pres_2011.selectAll("path")
+        svg_all_2011.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2011
+//END OF ALL FACTORS 2011
 
-//PERSCRIPTION 2012
-var svg_pres_2012 = d3.select(".factor-prescription .factor-tab-2012")
+//ALL FACTORS 2012
+var svg_all_2012 = d3.select(".factor-all .factor-tab-2012")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2012.call(tip);
+svg_all_2012.call(tip2);
 
-d3.csv("data/prescription/prescription-2012.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2012.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -483,50 +466,50 @@ d3.csv("data/prescription/prescription-2012.csv", function (data) {
             }
         }
 
-        svg_pres_2012.selectAll("path")
+        svg_all_2012.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2012
+//END OF ALL FACTORS 2012
 
-//PERSCRIPTION 2013
-var svg_pres_2013 = d3.select(".factor-prescription .factor-tab-2013")
+//ALL FACTORS 2013
+var svg_all_2013 = d3.select(".factor-all .factor-tab-2013")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2013.call(tip);
+svg_all_2013.call(tip2);
 
-d3.csv("data/prescription/prescription-2013.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2013.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -549,50 +532,50 @@ d3.csv("data/prescription/prescription-2013.csv", function (data) {
             }
         }
 
-        svg_pres_2013.selectAll("path")
+        svg_all_2013.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2013
+//END OF ALL FACTORS 2013
 
-//PERSCRIPTION 2014
-var svg_pres_2014 = d3.select(".factor-prescription .factor-tab-2014")
+//ALL FACTORS 2014
+var svg_all_2014 = d3.select(".factor-all .factor-tab-2014")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2014.call(tip);
+svg_all_2014.call(tip2);
 
-d3.csv("data/prescription/prescription-2014.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2014.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -615,50 +598,50 @@ d3.csv("data/prescription/prescription-2014.csv", function (data) {
             }
         }
 
-        svg_pres_2014.selectAll("path")
+        svg_all_2014.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2014
+//END OF ALL FACTORS 2014
 
-//PERSCRIPTION 2015
-var svg_pres_2015 = d3.select(".factor-prescription .factor-tab-2015")
+//ALL FACTORS 2015
+var svg_all_2015 = d3.select(".factor-all .factor-tab-2015")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2015.call(tip);
+svg_all_2015.call(tip2);
 
-d3.csv("data/prescription/prescription-2015.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2015.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -681,50 +664,50 @@ d3.csv("data/prescription/prescription-2015.csv", function (data) {
             }
         }
 
-        svg_pres_2015.selectAll("path")
+        svg_all_2015.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2015
+//END OF ALL FACTORS 2015
 
-//PERSCRIPTION 2016
-var svg_pres_2016 = d3.select(".factor-prescription .factor-tab-2016")
+//ALL FACTORS 2016
+var svg_all_2016 = d3.select(".factor-all .factor-tab-2016")
     .append("svg")
-    .attr("width", width)
-    .attr("height", height);
+    .attr("width", width2)
+    .attr("height", height2);
 
-svg_pres_2016.call(tip);
+svg_all_2016.call(tip2);
 
-d3.csv("data/prescription/prescription-2016.csv", function (data) {
+d3.csv("data/all-factors/all-factors-2016.csv", function (data) {
     var dataArray = [];
     for (var d = 0; d < data.length; d++) {
         dataArray.push(parseFloat(data[d].value))
     }
-    var minVal = 32
-    var maxVal = 150
+    var minVal = 16.76
+    var maxVal = 43.3
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -747,31 +730,31 @@ d3.csv("data/prescription/prescription-2016.csv", function (data) {
             }
         }
 
-        svg_pres_2016.selectAll("path")
+        svg_all_2016.selectAll("path")
             .data(json.features)
             .enter()
             .append("path")
-            .attr("d", path)
-            .attr("class", function (d) {
-                return d.properties.name.replace(/\s+/g, '');
-            })
+            .attr("d", path2)
             .on('mouseover', tip2.show)
             .on('mouseout', tip2.hide)
             .on('mouseenter', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).addClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).addClass("hovered");
                 $(".hovered .line").css("stroke", ramp(d.properties.value));
             })
             .on('mouseleave', function (d) {
                 var state_hover = "." + d.properties.name.replace(/\s+/g, '');
-                $(".prescription-linegraph").find(state_hover).removeClass("hovered");
+                $(".unemploy-linegraph").find(state_hover).removeClass("hovered");
                 $(".line").css("stroke", "rgba(0,0,0,0.1)");
+            })
+            .attr("class", function (d) {
+                return d.properties.name.replace(/\s+/g, '');
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1")
             .style("fill", function (d) {
                 return ramp(d.properties.value)
-            });     
+            });
     });
 });
-//END OF PERSCRIPTION 2016
+//END OF ALL FACTORS 2016
