@@ -81,7 +81,7 @@ d3.csv("data/drug-od/drug-od-2005.csv", function (data) {
             .append("svg")
             .attr("width", w)
             .attr("height", h)
-            .attr("class", "legend");
+            .attr("class", "legend legend-bottom");
 
         var legend = key.append("defs")
             .append("svg:linearGradient")
