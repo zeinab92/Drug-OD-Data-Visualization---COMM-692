@@ -45,6 +45,11 @@ p, ul {
     margin: 15px auto 1.5em;
 }
 
+h2 {
+    max-width: 780px;
+    margin: auto;
+}
+
 ul {
     margin-top: -25px;
     padding-left: 45px;
