@@ -25,7 +25,7 @@ d3.csv("data/drug-od/drug-od-2005.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -138,7 +138,7 @@ d3.csv("data/drug-od/drug-od-2006.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -206,7 +206,7 @@ d3.csv("data/drug-od/drug-od-2007.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -274,7 +274,7 @@ d3.csv("data/drug-od/drug-od-2008.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -342,7 +342,7 @@ d3.csv("data/drug-od/drug-od-2009.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -410,7 +410,7 @@ d3.csv("data/drug-od/drug-od-2010.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -478,7 +478,7 @@ d3.csv("data/drug-od/drug-od-2011.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -546,7 +546,7 @@ d3.csv("data/drug-od/drug-od-2012.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -614,7 +614,7 @@ d3.csv("data/drug-od/drug-od-2013.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -682,7 +682,7 @@ d3.csv("data/drug-od/drug-od-2014.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -750,7 +750,7 @@ d3.csv("data/drug-od/drug-od-2015.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
@@ -818,7 +818,7 @@ d3.csv("data/drug-od/drug-od-2016.csv", function (data) {
         dataArray.push(parseFloat(data[d].value))
     }
     var minVal = 4
-    var maxVal = 40
+    var maxVal = 45
     var ramp = d3.scaleLinear().domain([minVal, maxVal]).range([lowColor, highColor])
 
     d3.json("us-states.json", function (json) {
