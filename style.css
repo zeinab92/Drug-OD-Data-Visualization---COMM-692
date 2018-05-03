@@ -10,18 +10,22 @@
     box-sizing: border-box;
 }
 
-body, .ui-widget, .axis{
+body,
+.ui-widget,
+.axis {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Roboto Slab', serif;
 }
 
 header {
-    background: rgb(32,32,32);
+    background: rgb(32, 32, 32);
     padding: 0.5em 1em 3.5em;
     text-align: center;
     width: 100%;
@@ -38,8 +42,9 @@ header h1 {
     font-size: 40px;
 }
 
-p, ul {
-    font-size: 18px;
+p,
+ul {
+    font-size: 17px;
     line-height: 28px;
     max-width: 780px;
     margin: 15px auto 1.5em;
@@ -64,10 +69,13 @@ ul {
     width: 99%;
     max-width: 1500px;
     padding-left: 1%;
+    -webkit-transform: scale(0.97);
+    transform: scale(0.97);
 }
 
 .factor-tabs-wrapper {
     width: 11%;
+    position: relative;
 }
 
 .factor-tab-btn {
@@ -108,11 +116,13 @@ ul {
     padding: 1% 0;
 }
 
-.factor-tab, .factor-tabs {
+.factor-tab,
+.factor-tabs {
     position: relative;
 }
 
-.factor-tab, .factor-tabs {
+.factor-tab,
+.factor-tabs {
     display: none;
 }
 
@@ -142,18 +152,21 @@ ul {
     margin: 0;
 }
 
-.factor-od, .factor-od-bottom, .factor-all {
+.factor-od,
+.factor-od-bottom,
+.factor-all {
     display: block!important;
 }
 
-#slider, #slider-bottom {
+#slider,
+#slider-bottom {
     margin: 3.5em auto;
     width: 80%;
-/*    padding-right: 50px;*/
     margin-right: 15%;
 }
 
-#slider label, #slider-bottom label {
+#slider label,
+#slider-bottom label {
     margin-left: -10px;
     font-size: 13px;
     margin-top: 20px;
@@ -198,9 +211,11 @@ ul {
     color: #fff;
     border-radius: 2px;
     font-size: 14px;
+    margin-top: -5px;
 }
 
 /* Creates a small triangle extender for the tooltip */
+
 .d3-tip:after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -217,6 +232,7 @@ ul {
 }
 
 /* Line graph styling */
+
 .linegraph {
     display: none;
     overflow: visible;
@@ -224,9 +240,10 @@ ul {
 
 .line {
     fill: none;
-    stroke: rgba(0,0,0,0.1);
+    stroke: rgba(0, 0, 0, 0.1);
     stroke-width: 2px;
 }
+
 .state text {
     display: none;
     font-size: 12px;
@@ -239,21 +256,23 @@ ul {
     margin-top: 5.5em;
 }
 
-.state.hovered text, .linegraph .state:hover text {
+.state.hovered text,
+.linegraph .state:hover text {
     display: block;
 }
 
-.state.hovered .line, .linegraph .state:hover .line {
-    stroke: rgba(0,0,0,0.8);
+.state.hovered .line,
+.linegraph .state:hover .line {
+    stroke: rgba(0, 0, 0, 0.8);
     stroke-width: 4px;
     z-index: 99999;
 }
 
 .linegraph .state:hover .line {
-    stroke: rgba(0,0,0,0.8)!important;
+    stroke: rgba(0, 0, 0, 0.8)!important;
 }
 
-.tick{
+.tick {
     position: relative;
 }
 
@@ -262,4 +281,61 @@ ul {
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.tooltip {
+    height: 110px;
+    width: 105%;
+    position: absolute;
+    top: -120px;
+    left: 0;
+    background: rgb(32, 32, 32);
+    z-index: 9999;
+}
+
+.tooltip span.main-span {
+    position: absolute;
+    top: 47%;
+    z-index: 99999;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding: 0 5px;
+    font-size: 13px;
+}
+
+.tooltip .mini-btn {
+    background: #f0f0f0;
+    padding: 4px 10px;
+    color: #646464;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.tooltip__arrow {
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+
+.tooltip__arrow::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgb(32, 32, 32);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    top: 0;
+    left: 50%;
 }

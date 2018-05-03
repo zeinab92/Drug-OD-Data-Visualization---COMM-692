@@ -45,6 +45,10 @@
 
     <div class="wrapper" style="overflow: visible;">
         <div class="factor-tabs-wrapper">
+            <div class="tooltip">
+                <span class="main-span">Tip: Click through different factors to view data & trends<br><br><span class="mini-btn">CLOSE</span></span>
+                <div class="tooltip__arrow"></div>
+            </div>
             <div class="factor-tab-btn factor-tab-poverty active">
                 <span>Poverty</span>
             </div>
@@ -506,7 +510,7 @@
             <label>Drug Overdoses 2016<br><small>rate per 100,000 persons</small></label>
         </div>
     </div>
-        <div id="slider-bottom" style="margin-bottom: 40px;"></div>
+        <div id="slider-bottom" style="margin-bottom: 40px;width: 90%; margin-right: auto; margin-left: auto;"></div>
     </div>
 
     <p>&nbsp;</p>
@@ -1511,6 +1515,13 @@
         }
     </script>
     <!-- END OF DRUG OD LINEGRAPH SCRIPT -->
+    
+    
+    <script>
+        $(".tooltip").click(function(){
+            $(this).hide();
+        });
+    </script>
 
 </body>
 
